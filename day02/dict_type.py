@@ -49,4 +49,27 @@ def dict_zhuanhuan():
 #     dict_zhuanghuan()
 
 
-#题;新建一个字典变量,里面有2个键值对，通过key访问一个值，删除一个键值对，添加一个键值对，更改任意一个值，在新建一个字典，将两个合并
+
+bdict = {'username':'admin',"password":"23456"}
+def j_dict():
+    print(bdict['username'])
+def k_dict():
+    bdict.pop('username')
+    print(bdict)
+def l_dict():
+    bdict['age']=30
+    print(bdict)
+def c_dict():
+    bdict['username']='suncw'
+    print(bdict)
+
+def n_dict():
+    ndict = {"class":"1904"}
+    bdict.update(ndict)
+    print(bdict)
+if __name__ == '__main__':
+    j_dict()
+    k_dict()
+    l_dict()
+    c_dict()
+    n_dict()
