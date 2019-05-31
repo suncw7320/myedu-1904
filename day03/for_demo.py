@@ -16,5 +16,40 @@ def for_demo2():
     # 当步长为负数时, 第一个参数  要比第二个参数 大
     for i in range(15,7,-2):
         print(i)
+
+# 遍历 list
+def for_list():
+
+    blist = [1,2,3,4,5,6,7]
+    # 方式1
+    for i in blist:
+        print(i)
+    #方式2
+    for i in range(len(blist)):
+        print(blist[i])
+
+    # 嵌套循环
+def for_for():
+
+    # end ='xxx' : 让print 以什么内容结尾
+    # \n : 就是换行符
+    # print 默认 以换行符结尾
+    for i in range(5):
+        print('你好')
+        for j in range(2):
+            print('再见',end='/')
+        print('\n')
+
+def break_continue():
+    for i in range(5):
+        print(i)
+        if i ==2 :
+            break    #终止所有循环
+    for i in range(5):
+        if i ==2:
+            continue   # 停止本次循环,直接开始下一次循环
+        print(i)
 if __name__ == '__main__':
-    for_demo2()
+    # for_list()
+
+    break_continue()
