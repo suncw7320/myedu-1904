@@ -49,6 +49,8 @@ def break_continue():
         if i ==2:
             continue   # 停止本次循环,直接开始下一次循环
         print(i)
+
+
 if __name__ == '__main__':
     # for_list()
 
