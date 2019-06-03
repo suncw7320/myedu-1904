@@ -18,11 +18,33 @@ class Human(object):
     def info(self):
         print('这个人叫%s,今年%s岁,性别: %s'%(self.name,self.age,self.sex))
         self.eat()
+# 继承 : 继承那个类 就写那个类
+# 继承之后 子类 拥有父类中的属性 和 方法
+class Tester(Human):
+
+    def __init__(self,name,age,sex,job):
+        self.name = name
+        self.age = age
+        self.sex = sex
+        self.job = job
+    # 如果 子类中的方法名 和 父类中的重复了 , 那么这个叫重写方法,调用时 调用子类中的方法
+    def eat(self):
+        print(self.name+'在吃工作餐')
+
+    def do_test(self):
+        print(self.name+'在做开发')
+        self.sleep()
 if __name__ == '__main__':
     # 新建一个对象, 根据Human 类 新建对象
     # 对象是 类的  实例比
-    girl = Human('田雨',18,'女')
-    girl.eat()
-    girl.sleep()
-    girl.info()
+    # girl = Human('田雨',18,'女')
+    # girl.eat()
+    # girl.sleep()
+    # girl.info()
+
+    tester = Tester('咸鱼',20,'女','开发')
+    tester.do_test()
+    tester.eat()
+
+
 
